@@ -1,0 +1,4 @@
+preload-dbgsym_0.6.4-3_amd64.deb debug optional automatic=yes
+preload_0.6.4-3_amd64.buildinfo misc optional
+preload_0.6.4-3_amd64.deb misc optional
+preload_0.6.4-3_source.buildinfo misc optional
