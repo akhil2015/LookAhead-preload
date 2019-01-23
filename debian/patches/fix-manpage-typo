@@ -1,0 +1,17 @@
+Description: fix manpage typo
+
+s/configuratoin/configuration.g
+
+Bug-Debian: https://bugs.debian.org/697071
+
+--- preload-0.6.4.orig/src/preload.8.i
++++ preload-0.6.4/src/preload.8.i
+@@ -1,7 +1,7 @@
+ [SIGNALS]
+ 
+ On receipt of a SIGHUP, the daemon will close and reopen its log file, and
+-reread the configuratoin file.
++reread the configuration file.
+ 
+ On receipt of a SIGUSR1, the daemon dumps the currently loaded configuration
+ into the log file.

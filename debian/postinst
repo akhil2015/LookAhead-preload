@@ -1,0 +1,6 @@
+#! /bin/sh
+# postrm script for preload
+
+set -e
+
+touch /var/lib/preload/preload.state

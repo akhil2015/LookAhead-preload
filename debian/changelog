@@ -1,3 +1,15 @@
+preload (0.6.4-4) experimental; urgency=medium
+
+  * Upload to experimental
+  * Add VCS fields
+  * Downgrade compat to 10 (Attempt fix for #920197)
+  * Create /var/lib/preload/preload.state (Closes: #861937)
+  * Add patch to fix parallel builds (Closes: #893374)
+    (Thanks Adrian Bunk)
+  * Fix typo in manpage (Closes: #697071)
+
+ -- Jonathan Carter <jcc@debian.org>  Wed, 23 Jan 2019 15:18:33 +0200
+
 preload (0.6.4-3) unstable; urgency=medium
 
   * Adopting package (Closes: #646216)

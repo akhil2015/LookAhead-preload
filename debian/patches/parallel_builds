@@ -1,0 +1,17 @@
+Description: Don't build objects twice in parallel
+ Two gcc compiling the same object in parallel can result
+ in FTBFS due to corrupted objects.
+Author: Adrian Bunk <bunk@debian.org>
+
+--- preload-0.6.4.orig/src/Makefile.am
++++ preload-0.6.4/src/Makefile.am
+@@ -54,8 +54,7 @@ MAINTAINERCLEANFILES = preload.8
+ 
+ dist_man_MANS = preload.8
+ 
+-$(srcdir)/preload.8: cmdline.c ../configure.ac preload.8.i
+-	$(MAKE) $(AM_MAKEFLAGS) preload
++$(srcdir)/preload.8: preload.8.i preload
+ 	@echo "Creating $@ using help2man(1)"
+ 	@$(top_builddir)/missing --run \
+ 	   help2man --no-info --section=8 --include=preload.8.i \
