@@ -4,3 +4,7 @@
 set -e
 
 touch /var/lib/preload/preload.state
+
+#DEBHELPER#
+
+exit 0

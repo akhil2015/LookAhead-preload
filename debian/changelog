@@ -1,3 +1,11 @@
+preload (0.6.4-5~exp1) experimental; urgency=medium
+
+  * Remove more cdbs from debian/rules
+  * Remove no longer needed build-dependency on dh-autoreconf
+  * Add debhelper tag for postinst
+
+ -- Jonathan Carter <jcc@debian.org>  Thu, 24 Jan 2019 15:46:30 +0200
+
 preload (0.6.4-4) experimental; urgency=medium
 
   * Upload to experimental

@@ -54,7 +54,8 @@ MAINTAINERCLEANFILES = preload.8
 
 dist_man_MANS = preload.8
 
-$(srcdir)/preload.8: preload.8.i preload
+$(srcdir)/preload.8: cmdline.c ../configure.ac preload.8.i
+	$(MAKE) $(AM_MAKEFLAGS) preload
 	@echo "Creating $@ using help2man(1)"
 	@$(top_builddir)/missing --run \
 	   help2man --no-info --section=8 --include=preload.8.i \

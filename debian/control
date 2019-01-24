@@ -5,7 +5,6 @@ Maintainer: Jonathan Carter <jcc@debian.org>
 Build-Depends: debhelper (>= 10),
                libglib2.0-dev (>= 2.14),
 	       help2man,
-	       dh-autoreconf,
 	       lsb-base
 Standards-Version: 4.3.0
 Homepage: http://sourceforge.net/projects/preload
