@@ -1,3 +1,18 @@
+preload (0.6.4-5~exp3) unstable; urgency=medium
+
+  * Update compat to debhelper-compat=12, removing debian/compat
+  * Remove no longer needed debian/dirs 
+  * Skip auto_tests for now, they are broken under sbuild 
+  * Add Pre-Depends field in debian/control
+
+ -- Jonathan Carter <jcc@debian.org>  Thu, 07 Feb 2019 18:22:08 +0000
+
+preload (0.6.4-5~exp2) experimental; urgency=medium
+
+  * Downgrade compat down to 9
+
+ -- Jonathan Carter <jcc@debian.org>  Sun, 27 Jan 2019 11:42:24 +0200
+
 preload (0.6.4-5~exp1) experimental; urgency=medium
 
   * Remove more cdbs from debian/rules

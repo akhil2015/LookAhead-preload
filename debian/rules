@@ -7,21 +7,26 @@ DEB_BUILD_PARALLEL=yes
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 %:
-	dh $@
+	dh $@ --with autoreconf
+
+configure:
+	dh_autoreconf
+	./configure
+
+override_dh_auto_test:
 
 override_dh_auto_clean:
 	dh_auto_clean
-	rm -f src/preload.8  # generated at build time by help2man
 	rm -f config.log
+	dh_autoreconf_clean
 
 override_dh_install:
 	dh_install
 	# Remove cruft:
 	rm -r debian/preload/etc/rc.d debian/preload/etc/sysconfig
-	rm debian/preload/var/log/preload.log
+	rm -f debian/preload/var/log/preload.log
 	rm -fr debian/preload/usr/share/doc/preload-*
-	rm debian/preload/var/lib/preload/preload.state
+	rm -f debian/preload/var/lib/preload/preload.state
 	# Install and compress it manually, to be safe
-	rm -f debian/preload/usr/share/man/man8/preload.8.gz
 	cp src/preload.8 debian/preload/usr/share/man/man8/
-	gzip -9 debian/preload/usr/share/man/man8/preload.8
+	gzip -f -9 debian/preload/usr/share/man/man8/preload.8
