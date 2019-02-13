@@ -1,3 +1,9 @@
+preload (0.6.4-5) unstable; urgency=medium
+
+  * Upload to unstable (Closes: #920197)
+
+ -- Jonathan Carter <jcc@debian.org>  Wed, 13 Feb 2019 17:51:12 +0000
+
 preload (0.6.4-5~exp3) unstable; urgency=medium
 
   * Update compat to debhelper-compat=12, removing debian/compat
